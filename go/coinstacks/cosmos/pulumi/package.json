@@ -1,6 +1,6 @@
 {
-  "name": "@shapeshiftoss/cosmos-pulumi",
-  "version": "12.0.0",
+  "name": "@gridironx/cosmos-pulumi",
+  "version": "13.0.0",
   "license": "MIT",
   "private": true,
   "scripts": {

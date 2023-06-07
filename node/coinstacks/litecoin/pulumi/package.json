@@ -1,6 +1,6 @@
 {
-  "name": "@gridironx/litecoin-pulumi",
-  "version": "12.0.0",
+  "name": "@shapeshiftoss/litecoin-pulumi",
+  "version": "13.0.0",
   "license": "MIT",
   "private": true,
   "scripts": {
