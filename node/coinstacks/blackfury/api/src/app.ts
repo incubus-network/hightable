@@ -22,7 +22,7 @@ const INDEXER_WS_URL = process.env.INDEXER_WS_URL
 if (!INDEXER_WS_URL) throw new Error('INDEXER_WS_URL env var not set')
 
 export const logger = new Logger({
-  namespace: ['hightable', 'coinstacks', 'bnbsmartchain', 'api'],
+  namespace: ['hightable', 'coinstacks', 'blackfury', 'api'],
   level: process.env.LOG_LEVEL,
 })
 
@@ -32,13 +32,11 @@ app.use(json())
 app.use(urlencoded({ extended: true }))
 app.use(cors())
 
-app.get('/health', async (_, res) =>
-  res.json({ status: 'up', asset: 'bnbsmartchain', connections: wsServer.clients.size })
-)
+app.get('/health', async (_, res) => res.json({ status: 'up', asset: 'blackfury', connections: wsServer.clients.size }))
 
 const options: swaggerUi.SwaggerUiOptions = {
   customCss: '.swagger-ui .topbar { display: none }',
-  customSiteTitle: 'ShapeShift BNB Smart Chain API Docs',
+  customSiteTitle: 'ShapeShift Blackfury API Docs',
   customfavIcon: '/public/favi-blue.png',
   swaggerUrl: '/swagger.json',
 }
@@ -63,7 +61,7 @@ const blockHandler: BlockHandler<NewBlock, Array<BlockbookTx>> = async (block) =
 }
 
 const transactionHandler: TransactionHandler<BlockbookTx, evm.Tx> = async (blockbookTx) => {
-  const tx = await service.handleTransactionWithInternalTrace(blockbookTx)
+  const tx = await service.handleTransactionWithInternalTrace(blockbookTx, 'trace_transaction')
   const internalAddresses = (tx.internalTxs ?? []).reduce<Array<string>>((prev, tx) => [...prev, tx.to, tx.from], [])
   const addresses = [...new Set([...getAddresses(blockbookTx), ...internalAddresses])]
 

@@ -1,6 +1,6 @@
 import * as pulumi from '@pulumi/pulumi'
 import { core, Provider } from '@pulumi/kubernetes'
-import { EKSClusterLauncher, EKSClusterLauncherArgs } from '@incubus-network/cluster-launcher'
+import { EKSClusterLauncher, EKSClusterLauncherArgs } from '@shapeshiftoss/cluster-launcher'
 import { BaseConfig } from '..'
 import { buildAndPushDockerImages } from './docker'
 import { deployIpfs } from '../ipfs/ipfs'

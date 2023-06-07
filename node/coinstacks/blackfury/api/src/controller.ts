@@ -35,7 +35,7 @@ if (!NETWORK) throw new Error('NETWORK env var not set')
 if (!RPC_URL) throw new Error('RPC_URL env var not set')
 
 export const logger = new Logger({
-  namespace: ['hightable', 'coinstacks', 'gnosis', 'api'],
+  namespace: ['hightable', 'coinstacks', 'blackfury', 'api'],
   level: process.env.LOG_LEVEL,
 })
 
@@ -45,7 +45,7 @@ const provider = new ethers.providers.JsonRpcProvider(RPC_URL)
 export const service = new Service({
   blockbook,
   explorerApiKey: ETHERSCAN_API_KEY,
-  explorerApiUrl: 'https://api.gnosisscan.io/api',
+  explorerApiUrl: 'https://api.blackfuryscan.io/api',
   provider,
   logger,
   rpcUrl: RPC_URL,
@@ -53,7 +53,7 @@ export const service = new Service({
 
 @Route('api/v1')
 @Tags('v1')
-export class Gnosis extends Controller implements BaseAPI, API {
+export class Blackfury extends Controller implements BaseAPI, API {
   /**
    * Get information about the running coinstack
    *

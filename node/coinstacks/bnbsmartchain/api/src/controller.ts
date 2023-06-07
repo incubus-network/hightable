@@ -1,6 +1,6 @@
 import { ethers } from 'ethers'
 import { Body, Controller, Example, Get, Path, Post, Query, Response, Route, Tags } from 'tsoa'
-import { Blockbook } from '@gridironx/blockbook'
+import { Blockbook } from '@shapeshiftoss/blockbook'
 import { Logger } from '@shapeshiftoss/logger'
 import {
   BadRequestError,

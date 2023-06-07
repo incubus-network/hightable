@@ -11,7 +11,7 @@ import {
   BlockHandler,
   TransactionHandler,
 } from '@shapeshiftoss/common-api'
-import { Tx as BlockbookTx, WebsocketClient, getAddresses, NewBlock } from '@gridironx/blockbook'
+import { Tx as BlockbookTx, WebsocketClient, getAddresses, NewBlock } from '@shapeshiftoss/blockbook'
 import { Logger } from '@shapeshiftoss/logger'
 import { service } from './controller'
 import { RegisterRoutes } from './routes'

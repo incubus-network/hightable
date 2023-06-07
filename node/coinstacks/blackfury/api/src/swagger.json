@@ -432,7 +432,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "@shapeshiftoss/avalanche-api",
+		"title": "@gridironx/blackfury-api",
 		"version": "9.3.0",
 		"license": {
 			"name": "MIT"
@@ -485,17 +485,17 @@
 								"examples": {
 									"Example 1": {
 										"value": {
-											"balance": "183750000000000",
+											"balance": "400000000000000000",
 											"unconfirmedBalance": "0",
-											"nonce": 322,
-											"pubkey": "0x9D1170D30944F2E30664Be502aC57F6096fB5366",
+											"nonce": 0,
+											"pubkey": "0xBA7A4c521DfCD18fEB7cdA4B7CA182d739B7A6a0",
 											"tokens": [
 												{
-													"balance": "1337",
-													"contract": "0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB",
+													"balance": "1510000000000000000000",
+													"contract": "0x21a42669643f45Bc0e086b8Fc2ed70c23D67509d",
 													"decimals": 18,
-													"name": "Wrapped Ether",
-													"symbol": "WETH.e",
+													"name": "MERLIN on xDai",
+													"symbol": "MERLIN",
 													"type": "ERC20"
 												}
 											]
@@ -550,7 +550,7 @@
 						"schema": {
 							"type": "string"
 						},
-						"example": "0x9D1170D30944F2E30664Be502aC57F6096fB5366"
+						"example": "0xBA7A4c521DfCD18fEB7cdA4B7CA182d739B7A6a0"
 					}
 				]
 			}
@@ -569,23 +569,23 @@
 								"examples": {
 									"Example 1": {
 										"value": {
-											"pubkey": "0x9D1170D30944F2E30664Be502aC57F6096fB5366",
-											"cursor": "eyJibG9ja2Jvb2tQYWdlIjoyLCJleHBsb3JlclBhZ2UiOjEsImJsb2NrYm9va1R4aWQiOiIweDE0YTZlYTA4MWRhYWI1OWI1ZGQ3YTE3NjQ4YTAwNGU5Y2EzNzdhNWVkMmE5N2E4NGUyYWQ4MDVkZjJlMjUzM2QiLCJibG9ja0hlaWdodCI6MTc1MTIxNjR9",
+											"pubkey": "0xBA7A4c521DfCD18fEB7cdA4B7CA182d739B7A6a0",
+											"cursor": "eyJibG9ja2Jvb2tQYWdlIjozLCJleHBsb3JlclBhZ2UiOjEsImJsb2NrYm9va1R4aWQiOiIweGNlZTEwY2ViNzAwZDJmOGI1ODQ2YzVhY2E5NTg5NjY2NGZjYzk2ZDQzYTdiODg2NzRiYjA3MzJjMDI4MGVhNGYiLCJibG9ja0hlaWdodCI6MjYyNDQ2MTJ9",
 											"txs": [
 												{
-													"txid": "0x14a6ea081daab59b5dd7a17648a004e9ca377a5ed2a97a84e2ad805df2e2533d",
-													"blockHash": "0x748fff248d4a033c28cb6cc45b78ad7f471ac4d958971570e3e3afe4e0f84c1f",
-													"blockHeight": 17512164,
-													"timestamp": 1658197214,
+													"txid": "0xee248fabdd59f26d78ae37d311a34ce8a87ebcfc2251a11245647266f3518c2f",
+													"blockHash": "0x7104073111b319c81ef45d2c76e82ca1a582eb1094fa5a3302b83ca40bf5ae6d",
+													"blockHeight": 27990203,
+													"timestamp": 1684334420,
 													"status": 1,
-													"from": "0xa3682Fe8fD73B90A7564585A436EC2D2AEb612eE",
-													"to": "0x9D1170D30944F2E30664Be502aC57F6096fB5366",
-													"confirmations": 119004,
-													"value": "410000000000000000",
-													"fee": "525000000000000",
+													"from": "0x9045A4d097F03f34f515A3b3e7B2fD889Dd2Abb7",
+													"to": "0xBA7A4c521DfCD18fEB7cdA4B7CA182d739B7A6a0",
+													"confirmations": 17368,
+													"value": "400000000000000000",
+													"fee": "31500000147000",
 													"gasLimit": "21000",
 													"gasUsed": "21000",
-													"gasPrice": "25000000000"
+													"gasPrice": "1500000007"
 												}
 											]
 										}
@@ -639,7 +639,7 @@
 						"schema": {
 							"type": "string"
 						},
-						"example": "0x9D1170D30944F2E30664Be502aC57F6096fB5366"
+						"example": "0xBA7A4c521DfCD18fEB7cdA4B7CA182d739B7A6a0"
 					},
 					{
 						"description": "the cursor returned in previous query (base64 encoded json object with a 'page' property)",
@@ -678,19 +678,19 @@
 								"examples": {
 									"Example 1": {
 										"value": {
-											"txid": "0x14a6ea081daab59b5dd7a17648a004e9ca377a5ed2a97a84e2ad805df2e2533d",
-											"blockHash": "0x748fff248d4a033c28cb6cc45b78ad7f471ac4d958971570e3e3afe4e0f84c1f",
-											"blockHeight": 17512164,
-											"timestamp": 1658197214,
+											"txid": "0xee248fabdd59f26d78ae37d311a34ce8a87ebcfc2251a11245647266f3518c2f",
+											"blockHash": "0x7104073111b319c81ef45d2c76e82ca1a582eb1094fa5a3302b83ca40bf5ae6d",
+											"blockHeight": 27990203,
+											"timestamp": 1684334420,
 											"status": 1,
-											"from": "0xa3682Fe8fD73B90A7564585A436EC2D2AEb612eE",
-											"to": "0x9D1170D30944F2E30664Be502aC57F6096fB5366",
-											"confirmations": 119004,
-											"value": "410000000000000000",
-											"fee": "525000000000000",
+											"from": "0x9045A4d097F03f34f515A3b3e7B2fD889Dd2Abb7",
+											"to": "0xBA7A4c521DfCD18fEB7cdA4B7CA182d739B7A6a0",
+											"confirmations": 17385,
+											"value": "400000000000000000",
+											"fee": "31500000147000",
 											"gasLimit": "21000",
 											"gasUsed": "21000",
-											"gasPrice": "25000000000"
+											"gasPrice": "1500000007"
 										}
 									}
 								}
@@ -742,7 +742,7 @@
 						"schema": {
 							"type": "string"
 						},
-						"example": "0x14a6ea081daab59b5dd7a17648a004e9ca377a5ed2a97a84e2ad805df2e2533d"
+						"example": "0xee248fabdd59f26d78ae37d311a34ce8a87ebcfc2251a11245647266f3518c2f"
 					}
 				]
 			}
@@ -823,7 +823,7 @@
 						"schema": {
 							"type": "string"
 						},
-						"example": "0x9D1170D30944F2E30664Be502aC57F6096fB5366"
+						"example": "0xBA7A4c521DfCD18fEB7cdA4B7CA182d739B7A6a0"
 					},
 					{
 						"description": "transaction value in wei",
@@ -852,18 +852,20 @@
 								"examples": {
 									"Example 1": {
 										"value": {
-											"gasPrice": "27000000000",
+											"gasPrice": "4330000000",
+											"maxFeePerGas": "3625293906",
+											"maxPriorityFeePerGas": "3625293899",
 											"slow": {
-												"maxFeePerGas": "28000000000",
-												"maxPriorityFeePerGas": "1000000000"
+												"maxFeePerGas": "3110445001",
+												"maxPriorityFeePerGas": "3110444994"
 											},
 											"average": {
-												"maxFeePerGas": "30000000000",
-												"maxPriorityFeePerGas": "4500000000"
+												"maxFeePerGas": "3625293906",
+												"maxPriorityFeePerGas": "3625293899"
 											},
 											"fast": {
-												"maxFeePerGas": "33000000000",
-												"maxPriorityFeePerGas": "6300000000"
+												"maxFeePerGas": "5906365719",
+												"maxPriorityFeePerGas": "5906365712"
 											}
 										}
 									}
@@ -940,7 +942,7 @@
 						}
 					}
 				},
-				"description": "Broadcast signed raw transaction",
+				"description": "Sends raw transaction to be broadcast to the node.",
 				"tags": [
 					"v1"
 				],
@@ -977,10 +979,10 @@
 								"examples": {
 									"Example 1": {
 										"value": {
-											"name": "MadSkullz #5136",
-											"description": "MadSkullz #5136 is one of the 6666 NFTs from MadSkullz Collection that are joining SkullzCity to fight for Freedomz.",
+											"name": "Loyalty Program",
+											"description": "Welcome to the zkBridge Loyalty Point Program.",
 											"media": {
-												"url": "https://cdn.madskullz.io/madskullz/images/5136.png",
+												"url": "https://gateway.pinata.cloud/ipfs/QmVSiYEQaksNSR2vpKazf6vfe69xA2odJWurVEu4r53Cof",
 												"type": "image"
 											}
 										}
@@ -1024,7 +1026,7 @@
 						"schema": {
 							"type": "string"
 						},
-						"example": "0x3025C5c2aA6eb7364555aAC0074292195701bBD6"
+						"example": "0xB7F00edD54533b61a39e6E3B7bE710725DffB9d8"
 					},
 					{
 						"description": "token identifier",
@@ -1034,7 +1036,7 @@
 						"schema": {
 							"type": "string"
 						},
-						"example": "4525"
+						"example": "285605"
 					},
 					{
 						"description": "token type (erc721 or erc1155)",

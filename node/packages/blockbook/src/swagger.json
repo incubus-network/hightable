@@ -827,7 +827,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "@gridironx/blockbook",
+		"title": "@shapeshiftoss/blockbook",
 		"version": "9.3.0",
 		"license": {
 			"name": "MIT"

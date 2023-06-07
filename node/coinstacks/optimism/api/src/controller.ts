@@ -2,7 +2,7 @@ import { serialize } from '@ethersproject/transactions'
 import bn from 'bignumber.js'
 import { ethers, Contract, BigNumber } from 'ethers'
 import { Body, Controller, Example, Get, Path, Post, Query, Response, Route, Tags } from 'tsoa'
-import { Blockbook } from '@gridironx/blockbook'
+import { Blockbook } from '@shapeshiftoss/blockbook'
 import { Logger } from '@shapeshiftoss/logger'
 import { predeploys, getContractInterface } from '@eth-optimism/contracts'
 
