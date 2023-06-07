@@ -14,31 +14,10 @@ export = async (): Promise<Outputs> => {
       case 'daemon':
         return {
           ...service,
-          ports: {
-            'daemon-http': { port: 8545 },
-            'daemon-ws': { port: 8546, pathPrefix: '/websocket', stripPathPrefix: true },
-            'daemon-beacon': { port: 8551, ingressRoute: false },
+          ports: { 'daemon-rpc': { port: 8332 } },
+          env: {
+            NETWORK: config.network,
           },
-          configMapData: { 'jwt.hex': readFileSync('../daemon/jwt.hex').toString() },
-          readinessProbe: { httpGet: { path: '/health', port: 8545 }, timeoutSeconds: 5 },
-          volumeMounts: [{ name: 'config-map', mountPath: '/jwt.hex', subPath: 'jwt.hex' }],
-        }
-      case 'daemon-beacon':
-        return {
-          ...service,
-          command: [
-            '/usr/local/bin/lighthouse',
-            'beacon_node',
-            '--network=blackfury',
-            '--disable-upnp',
-            '--datadir=/data',
-            '--http',
-            '--execution-endpoint=http://localhost:8551',
-            '--execution-jwt=/jwt.hex',
-            '--checkpoint-sync-url=https://checkpoint.blackfurychain.com/',
-          ],
-          configMapData: { 'jwt.hex': readFileSync('../daemon/jwt.hex').toString() },
-          volumeMounts: [{ name: 'config-map', mountPath: '/jwt.hex', subPath: 'jwt.hex' }],
         }
       case 'indexer':
         return {
