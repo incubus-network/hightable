@@ -1,6 +1,6 @@
 {
-  "name": "@gridironx/bnbsmartchain-api",
-  "version": "9.3.0",
+  "name": "@shapeshiftoss/bnbsmartchain-api",
+  "version": "10.0.0",
   "license": "MIT",
   "private": true,
   "files": [
@@ -12,7 +12,7 @@
     "generate": "tsoa spec-and-routes"
   },
   "dependencies": {
-    "@gridironx/blockbook": "^9.3.0",
-    "@shapeshiftoss/common-api": "^9.3.0"
+    "@shapeshiftoss/blockbook": "^10.0.0",
+    "@shapeshiftoss/common-api": "^10.0.0"
   }
 }

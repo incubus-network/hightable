@@ -1,5 +1,5 @@
 {
-  "name": "@shapeshiftoss/litecoin-api",
+  "name": "@shapeshiftoss/blackfury-api",
   "version": "10.0.0",
   "license": "MIT",
   "private": true,
@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@shapeshiftoss/blockbook": "^10.0.0",
-    "@shapeshiftoss/common-api": "^10.0.0",
-    "bech32": "^2.0.0"
+    "@shapeshiftoss/common-api": "^10.0.0"
   }
 }
