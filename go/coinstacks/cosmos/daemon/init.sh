@@ -3,7 +3,7 @@
 set -e
 
 start() {
-  MONIKER=unchained \
+  MONIKER=hightable \
   CHAIN_JSON=https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/chain.json \
   P2P_POLKACHU=true \
   run.sh gaiad start \

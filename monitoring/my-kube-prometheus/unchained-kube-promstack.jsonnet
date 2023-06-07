@@ -18,10 +18,10 @@ local kp =
   {
     values+:: {
       common+: {
-        namespace: "unchained-monitoring",
+        namespace: "hightable-monitoring",
       },
       prometheus+:: {
-        namespaces+: ["unchained", "unchained-dev", "unchained-infra"],
+        namespaces+: ["hightable", "hightable-dev", "hightable-infra"],
       },
       grafana+:: {
         config: {

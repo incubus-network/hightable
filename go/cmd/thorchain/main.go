@@ -6,10 +6,10 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/shapeshift/unchained/coinstacks/thorchain/api"
-	"github.com/shapeshift/unchained/internal/config"
-	"github.com/shapeshift/unchained/internal/log"
-	"github.com/shapeshift/unchained/pkg/cosmos"
+	"github.com/incubus-network/hightable/coinstacks/thorchain/api"
+	"github.com/incubus-network/hightable/internal/config"
+	"github.com/incubus-network/hightable/internal/log"
+	"github.com/incubus-network/hightable/pkg/cosmos"
 
 	thortypes "gitlab.com/thorchain/thornode/x/thorchain/types"
 )

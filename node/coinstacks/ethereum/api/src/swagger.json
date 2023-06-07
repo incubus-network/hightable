@@ -432,7 +432,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "@shapeshiftoss/ethereum-api",
+		"title": "@gridironx/ethereum-api",
 		"version": "9.3.0",
 		"license": {
 			"name": "MIT"
@@ -494,8 +494,8 @@
 													"balance": "1337",
 													"contract": "0xc770EEfAd204B5180dF6a14Ee197D99d808ee52d",
 													"decimals": 18,
-													"name": "FOX",
-													"symbol": "FOX",
+													"name": "MERLIN",
+													"symbol": "MERLIN",
 													"type": "ERC20"
 												}
 											]

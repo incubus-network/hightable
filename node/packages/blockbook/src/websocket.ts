@@ -35,7 +35,7 @@ export class WebsocketClient {
   private readonly pingInterval: number
   private readonly retryAttempts = 5
 
-  private logger = new Logger({ namespace: ['unchained', 'blockbook'], level: process.env.LOG_LEVEL })
+  private logger = new Logger({ namespace: ['hightable', 'blockbook'], level: process.env.LOG_LEVEL })
 
   constructor(url: string, args: Args, opts?: Options) {
     this.handleTransaction = args.transactionHandler

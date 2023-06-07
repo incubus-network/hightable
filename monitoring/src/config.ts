@@ -16,7 +16,7 @@ export interface LoopConfig {
 export const getConfig = async (): Promise<LoopConfig> => {
   let config: MonitoringConfig
   try {
-    config = new pulumi.Config('unchained').requireObject<MonitoringConfig>('monitoring')
+    config = new pulumi.Config('hightable').requireObject<MonitoringConfig>('monitoring')
   } catch (e) {
     throw new pulumi.RunError(
       `Could not find required configuration file. \n\tDid you copy the Pulumi.sample.yaml file to Pulumi.${pulumi.getStack()}.yaml and update the necessary configuration?`

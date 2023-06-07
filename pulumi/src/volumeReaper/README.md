@@ -1,5 +1,5 @@
 
-# Unchained Volume Reaper
+# Hightable Volume Reaper
 
 A small Node.js CLI tool that automatically creates and deletes k8s VolumeSnapshots.
 

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import axiosRetry from 'axios-retry'
-import { ApiError as BlockbookApiError, Blockbook, Tx as BlockbookTx } from '@shapeshiftoss/blockbook'
+import { ApiError as BlockbookApiError, Blockbook, Tx as BlockbookTx } from '@gridironx/blockbook'
 import { AddressFormatter, ApiError, BadRequestError, BaseAPI, Cursor, RPCRequest, RPCResponse, SendTxBody } from '../'
 import { Account, Address, API, NetworkFee, NetworkFees, RawTx, Tx, TxHistory, Utxo } from './models'
 import { NodeBlock } from './types'

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/shapeshift/unchained/internal/log"
+	"github.com/incubus-network/hightable/internal/log"
 )
 
 type statusWriter struct {

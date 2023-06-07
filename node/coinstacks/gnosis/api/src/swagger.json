@@ -432,7 +432,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "@shapeshiftoss/gnosis-api",
+		"title": "@gridironx/gnosis-api",
 		"version": "9.3.0",
 		"license": {
 			"name": "MIT"
@@ -494,8 +494,8 @@
 													"balance": "1510000000000000000000",
 													"contract": "0x21a42669643f45Bc0e086b8Fc2ed70c23D67509d",
 													"decimals": 18,
-													"name": "FOX on xDai",
-													"symbol": "FOX",
+													"name": "MERLIN on xDai",
+													"symbol": "MERLIN",
 													"type": "ERC20"
 												}
 											]

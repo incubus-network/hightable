@@ -34,12 +34,12 @@ const getNodeCoinstackApiHash = async (coinstack: string, buildArgs: Record<stri
   const hash = createHash('sha1')
   const nodeBasePath = `${rootDir}/node`
 
-  // hash root level unchained files
-  const { hash: unchainedHash } = await hashElement(rootDir, {
+  // hash root level hightable files
+  const { hash: hightableHash } = await hashElement(rootDir, {
     folders: { exclude: ['.*', '*'] },
     files: { include: ['package.json', 'lerna.json', 'yarn.lock', 'Dockerfile.node'] },
   })
-  hash.update(unchainedHash)
+  hash.update(hightableHash)
 
   // hash contents of packages
   const { hash: packagesHash } = await hashElement(`${nodeBasePath}/packages`, {
@@ -73,11 +73,11 @@ const getGoCoinstackApiHash = async (coinstack: string, buildArgs: Record<string
   const goBasePath = `${rootDir}/go`
 
   // hash go module files
-  const { hash: unchainedHash } = await hashElement(goBasePath, {
+  const { hash: hightableHash } = await hashElement(goBasePath, {
     folders: { exclude: ['.*', '*'] },
     files: { include: ['go.mod', 'go.sum'] },
   })
-  hash.update(unchainedHash)
+  hash.update(hightableHash)
 
   // hash build files
   const { hash: buildHash } = await hashElement(`${goBasePath}/build`, {

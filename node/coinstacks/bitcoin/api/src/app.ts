@@ -5,7 +5,7 @@ import { Server } from 'ws'
 import swaggerUi from 'swagger-ui-express'
 import { Logger } from '@shapeshiftoss/logger'
 import { middleware, ConnectionHandler, Registry, BlockHandler, TransactionHandler } from '@shapeshiftoss/common-api'
-import { getAddresses, NewBlock, Tx as BlockbookTx, WebsocketClient } from '@shapeshiftoss/blockbook'
+import { getAddresses, NewBlock, Tx as BlockbookTx, WebsocketClient } from '@gridironx/blockbook'
 import { utxo } from '@shapeshiftoss/common-api'
 import { service, formatAddress } from './controller'
 import { RegisterRoutes } from './routes'
@@ -16,7 +16,7 @@ const INDEXER_WS_URL = process.env.INDEXER_WS_URL
 if (!INDEXER_WS_URL) throw new Error('INDEXER_WS_URL env var not set')
 
 const logger = new Logger({
-  namespace: ['unchained', 'coinstacks', 'bitcoin', 'api'],
+  namespace: ['hightable', 'coinstacks', 'bitcoin', 'api'],
   level: process.env.LOG_LEVEL,
 })
 

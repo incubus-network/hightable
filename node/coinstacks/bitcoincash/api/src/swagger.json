@@ -536,7 +536,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "@shapeshiftoss/bitcoincash-api",
+		"title": "@gridironx/bitcoincash-api",
 		"version": "9.3.0",
 		"license": {
 			"name": "MIT"

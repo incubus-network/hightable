@@ -25,7 +25,7 @@ export const deployCoinstack = async (args: CoinstackArgs): Promise<Outputs> => 
 
   new k8s.core.v1.Secret(assetName, { metadata: { name: assetName, namespace }, stringData: secretData }, { provider })
 
-  const baseImageName = 'shapeshiftdao/unchained-base:latest'
+  const baseImageName = 'incubus-networkdao/hightable-base:latest'
   const snapshots = await new Snapper({ assetName, kubeconfig, namespace }).getSnapshots()
 
   await deployApi({ ...args, assetName, baseImageName, provider })

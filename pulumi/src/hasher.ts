@@ -8,12 +8,12 @@ const nodeDir = `${__dirname}/../../node`
 export const getBaseHash = async (): Promise<string> => {
   const hash = createHash('sha1')
 
-  // hash root level unchained files
-  const { hash: unchainedHash } = await hashElement(rootDir, {
+  // hash root level hightable files
+  const { hash: hightableHash } = await hashElement(rootDir, {
     folders: { exclude: ['.*', '*'] },
     files: { include: ['package.json', 'lerna.json', 'yarn.lock', 'Dockerfile.node'] },
   })
-  hash.update(unchainedHash)
+  hash.update(hightableHash)
 
   // hash contents of packages
   const { hash: packagesHash } = await hashElement(`${nodeDir}/packages`, {
@@ -42,12 +42,12 @@ export const getBaseHash = async (): Promise<string> => {
 export const getVolumeReaperHash = async (): Promise<string> => {
   const hash = createHash('sha1')
 
-  // hash root level unchained files
-  const { hash: unchainedHash } = await hashElement(rootDir, {
+  // hash root level hightable files
+  const { hash: hightableHash } = await hashElement(rootDir, {
     folders: { exclude: ['.*', '*'] },
     files: { include: ['package.json', 'lerna.json', 'yarn.lock', 'Dockerfile.node'] },
   })
-  hash.update(unchainedHash)
+  hash.update(hightableHash)
 
   // hash contents of pulumi
   const { hash: importsHash } = await hashElement(`${__dirname}/..`, {

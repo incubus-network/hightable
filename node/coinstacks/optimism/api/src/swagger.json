@@ -440,7 +440,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "@shapeshiftoss/optimism-api",
+		"title": "@gridironx/optimism-api",
 		"version": "9.3.0",
 		"license": {
 			"name": "MIT"

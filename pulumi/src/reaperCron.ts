@@ -10,7 +10,7 @@ export const deployReaperCron = (asset: string, sts: StatefulService, namespace:
 
   const container = {
     name,
-    image: 'shapeshiftdao/unchained-volume-reaper:latest',
+    image: 'incubus-networkdao/hightable-volume-reaper:latest',
     args: ['-n', namespace, '-s', services, '-a', asset, '-c', `${sts.backup.count}`],
   }
 

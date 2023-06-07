@@ -12,7 +12,7 @@ import {
   BlockHandler,
   TransactionHandler,
 } from '@shapeshiftoss/common-api'
-import { Tx as BlockbookTx, WebsocketClient, getAddresses, NewBlock } from '@shapeshiftoss/blockbook'
+import { Tx as BlockbookTx, WebsocketClient, getAddresses, NewBlock } from '@gridironx/blockbook'
 import { Logger } from '@shapeshiftoss/logger'
 import { service } from './controller'
 import { RegisterRoutes } from './routes'
@@ -23,7 +23,7 @@ const INDEXER_WS_URL = process.env.INDEXER_WS_URL
 if (!INDEXER_WS_URL) throw new Error('INDEXER_WS_URL env var not set')
 
 export const logger = new Logger({
-  namespace: ['unchained', 'coinstacks', 'optimism', 'api'],
+  namespace: ['hightable', 'coinstacks', 'optimism', 'api'],
   level: process.env.LOG_LEVEL,
 })
 

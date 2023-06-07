@@ -11,8 +11,8 @@ import (
 	"github.com/gorilla/mux"
 	ws "github.com/gorilla/websocket"
 	"github.com/pkg/errors"
-	"github.com/shapeshift/unchained/pkg/api"
-	"github.com/shapeshift/unchained/pkg/websocket"
+	"github.com/incubus-network/hightable/pkg/api"
+	"github.com/incubus-network/hightable/pkg/websocket"
 )
 
 const (

@@ -16,7 +16,7 @@ export interface RegistryArgs {
 /**
  * The registry keeps track of all client websocket connections and their associated addresses that have been registered.
  * Upon receiving new block or transaction messages from the server side websocket connection to the node,
- * unchained transaction payloads will be sent to any clients that have an address registered that was found in the transaction.
+ * hightable transaction payloads will be sent to any clients that have an address registered that was found in the transaction.
  */
 export class Registry {
   private clients: Record<string, Map<string, void>>
@@ -26,7 +26,7 @@ export class Registry {
   private handleTransaction: TransactionHandler
   private formatAddress: AddressFormatter = (address: string) => address.toLowerCase()
 
-  private logger = new Logger({ namespace: ['unchained', 'common', 'api', 'registry'], level: process.env.LOG_LEVEL })
+  private logger = new Logger({ namespace: ['hightable', 'common', 'api', 'registry'], level: process.env.LOG_LEVEL })
 
   constructor(args: RegistryArgs) {
     this.clients = {}

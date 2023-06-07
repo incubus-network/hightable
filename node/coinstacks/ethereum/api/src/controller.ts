@@ -1,6 +1,6 @@
 import { ethers } from 'ethers'
 import { Body, Controller, Example, Get, Path, Post, Query, Response, Route, Tags } from 'tsoa'
-import { Blockbook } from '@shapeshiftoss/blockbook'
+import { Blockbook } from '@gridironx/blockbook'
 import { Logger } from '@shapeshiftoss/logger'
 import {
   BadRequestError,
@@ -35,7 +35,7 @@ if (!NETWORK) throw new Error('NETWORK env var not set')
 if (!RPC_URL) throw new Error('RPC_URL env var not set')
 
 export const logger = new Logger({
-  namespace: ['unchained', 'coinstacks', 'ethereum', 'api'],
+  namespace: ['hightable', 'coinstacks', 'ethereum', 'api'],
   level: process.env.LOG_LEVEL,
 })
 
@@ -88,8 +88,8 @@ export class Ethereum extends Controller implements BaseAPI, API {
         balance: '1337',
         contract: '0xc770EEfAd204B5180dF6a14Ee197D99d808ee52d',
         decimals: 18,
-        name: 'FOX',
-        symbol: 'FOX',
+        name: 'MERLIN',
+        symbol: 'MERLIN',
         type: 'ERC20',
       },
     ],

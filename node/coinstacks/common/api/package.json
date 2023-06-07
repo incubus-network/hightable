@@ -14,7 +14,7 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "@shapeshiftoss/blockbook": "^9.3.0",
+    "@gridironx/blockbook": "^9.3.0",
     "bignumber.js": "^9.1.1",
     "tsoa": "^4.1.0",
     "uuid": "^8.3.2",

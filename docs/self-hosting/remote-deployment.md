@@ -1,6 +1,6 @@
-# Remote Unchained Deployment
+# Remote Hightable Deployment
 
-run your own [uncahined api](https://api.ethereum.shapeshift.com/docs/#/)
+run your own [uncahined api](https://api.ethereum.incubus-network.com/docs/#/)
 
 ### dependencies:
 
@@ -11,16 +11,16 @@ run your own [uncahined api](https://api.ethereum.shapeshift.com/docs/#/)
 - [etherscan](https://etherscan.io/)
 - [npm](https://www.npmjs.com/)
 
-an owned domain name\* to host unchained
+an owned domain name\* to host hightable
 dns registrar (ex [godaddy](https://www.godaddy.com/))
 
 ### ShapeShift tools
 
-[repo](https://github.com/shapeshift/cluster-launcher)
+[repo](https://github.com/incubus-network/cluster-launcher)
 
 ### overview
 
-1. fork unchained repo
+1. fork hightable repo
 2. setup AWS account
 3. setup circle.
 4. sign up for npm

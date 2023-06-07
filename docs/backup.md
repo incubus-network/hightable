@@ -1,5 +1,5 @@
 
-# Unchained coinstack backup & restore
+# Hightable coinstack backup & restore
 
 Automated backup can be configured via nodestack config. Alternatively, manual snapshots can be taken either with the use of `VolumeSnapshot` k8s crd's, or via the EC2 Volume Snapshot mechanism.
 

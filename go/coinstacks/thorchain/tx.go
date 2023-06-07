@@ -4,7 +4,7 @@ import (
 	"strconv"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/shapeshift/unchained/pkg/cosmos"
+	"github.com/incubus-network/hightable/pkg/cosmos"
 	"gitlab.com/thorchain/thornode/common"
 	thorchaintypes "gitlab.com/thorchain/thornode/x/thorchain/types"
 )

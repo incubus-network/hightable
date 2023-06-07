@@ -1,6 +1,6 @@
 import * as pulumi from '@pulumi/pulumi'
 import { core, Provider } from '@pulumi/kubernetes'
-import { EKSClusterLauncher, EKSClusterLauncherArgs } from '@shapeshiftoss/cluster-launcher'
+import { EKSClusterLauncher, EKSClusterLauncherArgs } from '@incubus-network/cluster-launcher'
 import { BaseConfig } from '..'
 import { buildAndPushDockerImages } from './docker'
 import { deployIpfs } from '../ipfs/ipfs'
@@ -12,7 +12,7 @@ interface Config extends BaseConfig {
 
 const config = (() => {
   try {
-    return new pulumi.Config('unchained').requireObject<Config>('common')
+    return new pulumi.Config('hightable').requireObject<Config>('common')
   } catch (e) {
     throw new pulumi.RunError(
       `Could not find required configuration file. \n\tDid you copy the Pulumi.sample.yaml file to Pulumi.${pulumi.getStack()}.yaml and update the necessary configuration?`
@@ -38,8 +38,8 @@ type Outputs = Record<string, any>
 
 //https://www.pulumi.com/docs/intro/languages/javascript/#entrypoint
 export = async (): Promise<Outputs> => {
-  const name = 'unchained'
-  const defaultNamespace = 'unchained'
+  const name = 'hightable'
+  const defaultNamespace = 'hightable'
   const outputs: Outputs = {}
 
   if (!config.rootDomainName) throw new Error('rootDomainName required')
@@ -76,7 +76,7 @@ export = async (): Promise<Outputs> => {
   })
 
   deployIpfs({
-    namespace: 'unchained-infra',
+    namespace: 'hightable-infra',
     domain: config.rootDomainName,
     additionalDomain: process.env.ADDITIONAL_ROOT_DOMAIN_NAME,
     provider,

@@ -536,7 +536,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "@shapeshiftoss/litecoin-api",
+		"title": "@gridironx/litecoin-api",
 		"version": "9.3.0",
 		"license": {
 			"name": "MIT"

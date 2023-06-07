@@ -6,7 +6,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	gammtypes "github.com/osmosis-labs/osmosis/v6/x/gamm/types"
 	lockuptypes "github.com/osmosis-labs/osmosis/v6/x/lockup/types"
-	"github.com/shapeshift/unchained/pkg/cosmos"
+	"github.com/incubus-network/hightable/pkg/cosmos"
 )
 
 // ParseMessages will parse any osmosis or cosmos-sdk message types

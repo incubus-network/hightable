@@ -32,7 +32,7 @@ metadata:
   name: <data-xxx-sts-0>
   namespace: <namespace>
   labels:
-    app: unchained
+    app: hightable
     asset: <assetname>
     tier: statefulservice
 spec:

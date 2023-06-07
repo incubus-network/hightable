@@ -1,14 +1,10 @@
 {
-  "consumes": [
-    "application/json"
-  ],
-  "produces": [
-    "application/json"
-  ],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
   "swagger": "2.0",
   "info": {
     "description": "Provides access to osmosis chain data.",
-    "title": "Osmosis Unchained API",
+    "title": "Osmosis Hightable API",
     "license": {
       "name": "MIT",
       "url": "http://opensource.org/licenses/MIT"
@@ -17,9 +13,7 @@
   "paths": {
     "/": {
       "get": {
-        "tags": [
-          "Websocket"
-        ],
+        "tags": ["Websocket"],
         "summary": "Subscribe to pending and confirmed transactions.",
         "operationId": "Websocket",
         "responses": {
@@ -31,9 +25,7 @@
     },
     "/api/v1/account/{pubkey}": {
       "get": {
-        "tags": [
-          "v1"
-        ],
+        "tags": ["v1"],
         "summary": "Get account details.",
         "operationId": "GetAccount",
         "parameters": [
@@ -70,9 +62,7 @@
     },
     "/api/v1/account/{pubkey}/txs": {
       "get": {
-        "tags": [
-          "v1"
-        ],
+        "tags": ["v1"],
         "summary": "Get paginated transaction history.",
         "operationId": "GetTxHistory",
         "parameters": [
@@ -124,9 +114,7 @@
     },
     "/api/v1/gas/estimate": {
       "post": {
-        "tags": [
-          "v1"
-        ],
+        "tags": ["v1"],
         "summary": "Get the estimated gas cost for a transaction.",
         "operationId": "EstimateGas",
         "parameters": [
@@ -135,9 +123,7 @@
             "in": "body",
             "schema": {
               "type": "object",
-              "required": [
-                "rawTx"
-              ],
+              "required": ["rawTx"],
               "properties": {
                 "rawTx": {
                   "description": "Raw transaction",
@@ -172,9 +158,7 @@
     },
     "/api/v1/info": {
       "get": {
-        "tags": [
-          "v1"
-        ],
+        "tags": ["v1"],
         "summary": "Get information about the running coinstack.",
         "operationId": "GetInfo",
         "responses": {
@@ -189,9 +173,7 @@
     },
     "/api/v1/send": {
       "post": {
-        "tags": [
-          "v1"
-        ],
+        "tags": ["v1"],
         "summary": "Sends raw transaction to be broadcast to the node.",
         "operationId": "SendTx",
         "parameters": [
@@ -200,9 +182,7 @@
             "in": "body",
             "schema": {
               "type": "object",
-              "required": [
-                "rawTx"
-              ],
+              "required": ["rawTx"],
               "properties": {
                 "rawTx": {
                   "description": "Raw transaction",
@@ -238,9 +218,7 @@
     "/api/v1/tx/{txid}": {
       "get": {
         "description": "# Get transaction details",
-        "tags": [
-          "v1"
-        ],
+        "tags": ["v1"],
         "operationId": "GetTx",
         "parameters": [
           {
@@ -276,9 +254,7 @@
     },
     "/api/v1/validators": {
       "get": {
-        "tags": [
-          "v1"
-        ],
+        "tags": ["v1"],
         "summary": "Get the list of current validators.",
         "operationId": "GetValidators",
         "parameters": [
@@ -316,9 +292,7 @@
     },
     "/api/v1/validators/{pubkey}": {
       "get": {
-        "tags": [
-          "v1"
-        ],
+        "tags": ["v1"],
         "summary": "Get a specific validator.",
         "operationId": "GetValidator",
         "parameters": [
@@ -349,9 +323,7 @@
     },
     "/api/v1/validators/{pubkey}/txs": {
       "get": {
-        "tags": [
-          "v1"
-        ],
+        "tags": ["v1"],
         "summary": "Get paginated transaction history for a validator.",
         "operationId": "ValidatorTxHistory",
         "parameters": [
@@ -413,14 +385,12 @@
           "$ref": "#/definitions/Staking"
         }
       ],
-      "x-go-package": "github.com/shapeshift/unchained/coinstacks/osmosis/api"
+      "x-go-package": "github.com/incubus-network/hightable/coinstacks/osmosis/api"
     },
     "ApiError": {
       "description": "Generic api error for handling failed requests",
       "type": "object",
-      "required": [
-        "message"
-      ],
+      "required": ["message"],
       "properties": {
         "message": {
           "type": "string",
@@ -428,15 +398,12 @@
         }
       },
       "x-go-name": "Error",
-      "x-go-package": "github.com/shapeshift/unchained/pkg/api"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/api"
     },
     "Attribute": {
       "description": "Contains info about a transaction log event key/val attribute",
       "type": "object",
-      "required": [
-        "key",
-        "value"
-      ],
+      "required": ["key", "value"],
       "properties": {
         "key": {
           "type": "string",
@@ -449,7 +416,7 @@
           "example": "/cosmos.bank.v1beta1.MsgSend"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "AttributesByEvent": {
       "description": "Contains info about event attributes keyed by event type",
@@ -457,30 +424,24 @@
       "additionalProperties": {
         "$ref": "#/definitions/ValueByAttribute"
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "BadRequestError": {
       "description": "Contains info about a 400 Bad Request response",
       "type": "object",
-      "required": [
-        "error"
-      ],
+      "required": ["error"],
       "properties": {
         "error": {
           "type": "string",
           "x-go-name": "Error"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/api"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/api"
     },
     "BaseAccount": {
       "description": "Contains info about required base account details for an address or xpub",
       "type": "object",
-      "required": [
-        "balance",
-        "unconfirmedBalance",
-        "pubkey"
-      ],
+      "required": ["balance", "unconfirmedBalance", "pubkey"],
       "properties": {
         "balance": {
           "type": "string",
@@ -497,14 +458,12 @@
           "example": "0"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/api"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/api"
     },
     "BaseInfo": {
       "description": "Contains required base info about the running coinstack",
       "type": "object",
-      "required": [
-        "network"
-      ],
+      "required": ["network"],
       "properties": {
         "network": {
           "type": "string",
@@ -512,16 +471,12 @@
           "example": "mainnet"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/api"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/api"
     },
     "BaseTx": {
       "description": "Contains info about required base transaction details",
       "type": "object",
-      "required": [
-        "txid",
-        "blockHeight",
-        "timestamp"
-      ],
+      "required": ["txid", "blockHeight", "timestamp"],
       "properties": {
         "blockHash": {
           "type": "string",
@@ -544,7 +499,7 @@
           "x-go-name": "TxID"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/api"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/api"
     },
     "BaseTxHistory": {
       "description": "Contains info about required base transaction history details",
@@ -554,10 +509,7 @@
         },
         {
           "type": "object",
-          "required": [
-            "pubkey",
-            "txs"
-          ],
+          "required": ["pubkey", "txs"],
           "properties": {
             "pubkey": {
               "type": "string",
@@ -573,7 +525,7 @@
           }
         }
       ],
-      "x-go-package": "github.com/shapeshift/unchained/pkg/api"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/api"
     },
     "CosmosSDKAccount": {
       "description": "Contains common cosmossdk info about account details for an address or xpub",
@@ -583,11 +535,7 @@
         },
         {
           "type": "object",
-          "required": [
-            "accountNumber",
-            "sequence",
-            "assets"
-          ],
+          "required": ["accountNumber", "sequence", "assets"],
           "properties": {
             "accountNumber": {
               "type": "integer",
@@ -612,7 +560,7 @@
         }
       ],
       "x-go-name": "Account",
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "CosmosSDKInfo": {
       "description": "Contains common cosmossdk info about the running coinstack",
@@ -622,16 +570,12 @@
         }
       ],
       "x-go-name": "Info",
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "Delegation": {
       "description": "Contains info about a staking delegation",
       "type": "object",
-      "required": [
-        "validator",
-        "shares",
-        "balance"
-      ],
+      "required": ["validator", "shares", "balance"],
       "properties": {
         "balance": {
           "$ref": "#/definitions/Value"
@@ -645,15 +589,12 @@
           "$ref": "#/definitions/Validator"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "Event": {
       "description": "Contains info about a transaction log event",
       "type": "object",
-      "required": [
-        "type",
-        "attributes"
-      ],
+      "required": ["type", "attributes"],
       "properties": {
         "attributes": {
           "type": "array",
@@ -668,7 +609,7 @@
           "example": "message"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "EventsByMsgIndex": {
       "description": "Contains info about transaction events keyed by message index",
@@ -676,11 +617,11 @@
       "additionalProperties": {
         "$ref": "#/definitions/AttributesByEvent"
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "GasAmount": {
       "type": "string",
-      "x-go-package": "github.com/shapeshift/unchained/pkg/api"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/api"
     },
     "Info": {
       "description": "Contains info about the running coinstack",
@@ -690,9 +631,7 @@
         },
         {
           "type": "object",
-          "required": [
-            "apr"
-          ],
+          "required": ["apr"],
           "properties": {
             "apr": {
               "type": "string",
@@ -702,7 +641,7 @@
           }
         }
       ],
-      "x-go-package": "github.com/shapeshift/unchained/coinstacks/osmosis/api"
+      "x-go-package": "github.com/incubus-network/hightable/coinstacks/osmosis/api"
     },
     "InternalServerError": {
       "description": "Contains info about a 500 Internal Server Error response",
@@ -713,18 +652,12 @@
           "x-go-name": "Message"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/api"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/api"
     },
     "Message": {
       "description": "Contains info about a transaction message",
       "type": "object",
-      "required": [
-        "origin",
-        "from",
-        "to",
-        "type",
-        "value"
-      ],
+      "required": ["origin", "from", "to", "type", "value"],
       "properties": {
         "from": {
           "type": "string",
@@ -747,14 +680,12 @@
           "$ref": "#/definitions/Value"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "Pagination": {
       "description": "Contains info about pagination metadata",
       "type": "object",
-      "required": [
-        "cursor"
-      ],
+      "required": ["cursor"],
       "properties": {
         "cursor": {
           "description": "Base64 encoded string to fetch next page or undefined if no more data avaiable",
@@ -763,16 +694,12 @@
           "example": "d2l0aGRyYXdfZGVsZWdhdG9yX3Jld2FyZA=="
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/api"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/api"
     },
     "Redelegation": {
       "description": "Contains info about a staking redelegation",
       "type": "object",
-      "required": [
-        "sourceValidator",
-        "destinationValidator",
-        "entries"
-      ],
+      "required": ["sourceValidator", "destinationValidator", "entries"],
       "properties": {
         "destinationValidator": {
           "$ref": "#/definitions/Validator"
@@ -788,16 +715,12 @@
           "$ref": "#/definitions/Validator"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "RedelegationEntry": {
       "description": "Contains info about a redelegation action",
       "type": "object",
-      "required": [
-        "completionTime",
-        "shares",
-        "balance"
-      ],
+      "required": ["completionTime", "shares", "balance"],
       "properties": {
         "balance": {
           "type": "string",
@@ -815,15 +738,12 @@
           "example": "123456.789"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "Reward": {
       "description": "Contains info about a validator reward",
       "type": "object",
-      "required": [
-        "validator",
-        "rewards"
-      ],
+      "required": ["validator", "rewards"],
       "properties": {
         "rewards": {
           "type": "array",
@@ -836,17 +756,12 @@
           "$ref": "#/definitions/Validator"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "Staking": {
       "description": "Contains info about current staking state",
       "type": "object",
-      "required": [
-        "delegations",
-        "redelegations",
-        "unbondings",
-        "rewards"
-      ],
+      "required": ["delegations", "redelegations", "unbondings", "rewards"],
       "properties": {
         "delegations": {
           "type": "array",
@@ -877,11 +792,11 @@
           "x-go-name": "Unbondings"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "TransactionHash": {
       "type": "string",
-      "x-go-package": "github.com/shapeshift/unchained/pkg/api"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/api"
     },
     "Tx": {
       "description": "Contains info about a transaction",
@@ -892,16 +807,7 @@
         },
         {
           "type": "object",
-          "required": [
-            "confirmations",
-            "fee",
-            "gasUsed",
-            "gasWanted",
-            "index",
-            "value",
-            "messages",
-            "events"
-          ],
+          "required": ["confirmations", "fee", "gasUsed", "gasWanted", "index", "value", "messages", "events"],
           "properties": {
             "confirmations": {
               "type": "integer",
@@ -948,7 +854,7 @@
           }
         }
       ],
-      "x-go-package": "github.com/shapeshift/unchained/pkg/api"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/api"
     },
     "TxHistory": {
       "description": "Contains info about transaction history for an address or xpub",
@@ -958,9 +864,7 @@
         },
         {
           "type": "object",
-          "required": [
-            "txs"
-          ],
+          "required": ["txs"],
           "properties": {
             "txs": {
               "type": "array",
@@ -972,15 +876,12 @@
           }
         }
       ],
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "Unbonding": {
       "description": "Contains info about a staking unbonding",
       "type": "object",
-      "required": [
-        "validator",
-        "entries"
-      ],
+      "required": ["validator", "entries"],
       "properties": {
         "entries": {
           "type": "array",
@@ -993,15 +894,12 @@
           "$ref": "#/definitions/Validator"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "UnbondingEntry": {
       "description": "Contains info about an unbonding action",
       "type": "object",
-      "required": [
-        "completionTime",
-        "balance"
-      ],
+      "required": ["completionTime", "balance"],
       "properties": {
         "balance": {
           "$ref": "#/definitions/Value"
@@ -1012,15 +910,12 @@
           "example": "1642533407592"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "ValidationError": {
       "description": "Contains info about a 422 Validation Error response",
       "type": "object",
-      "required": [
-        "message",
-        "details"
-      ],
+      "required": ["message", "details"],
       "properties": {
         "details": {
           "type": "object",
@@ -1035,7 +930,7 @@
           "example": "Validation failed"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/api"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/api"
     },
     "Validator": {
       "description": "Contains info about a validator",
@@ -1105,16 +1000,12 @@
           "example": "http://superval.com"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "ValidatorCommission": {
       "description": "Contains info about validator commission settings",
       "type": "object",
-      "required": [
-        "rate",
-        "maxRate",
-        "maxChangeRate"
-      ],
+      "required": ["rate", "maxRate", "maxChangeRate"],
       "properties": {
         "maxChangeRate": {
           "type": "string",
@@ -1132,15 +1023,12 @@
           "example": "0.050000000000000000"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "ValidatorUnbonding": {
       "description": "Contains info about validator unbonding settings",
       "type": "object",
-      "required": [
-        "height",
-        "timestamp"
-      ],
+      "required": ["height", "timestamp"],
       "properties": {
         "height": {
           "type": "integer",
@@ -1155,7 +1043,7 @@
           "example": 1642776702
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "Validators": {
       "description": "Contains a list of validators",
@@ -1165,9 +1053,7 @@
         },
         {
           "type": "object",
-          "required": [
-            "validators"
-          ],
+          "required": ["validators"],
           "properties": {
             "validators": {
               "type": "array",
@@ -1179,15 +1065,12 @@
           }
         }
       ],
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "Value": {
       "description": "Contains info about an asset value",
       "type": "object",
-      "required": [
-        "amount",
-        "denom"
-      ],
+      "required": ["amount", "denom"],
       "properties": {
         "amount": {
           "type": "string",
@@ -1200,7 +1083,7 @@
           "example": "udenom"
         }
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     },
     "ValueByAttribute": {
       "description": "Contains info about an attribute value keyed by attribute type",
@@ -1208,7 +1091,7 @@
       "additionalProperties": {
         "type": "string"
       },
-      "x-go-package": "github.com/shapeshift/unchained/pkg/cosmos"
+      "x-go-package": "github.com/incubus-network/hightable/pkg/cosmos"
     }
   }
 }

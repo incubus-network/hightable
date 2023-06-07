@@ -3,7 +3,7 @@
 set -e
 
 start() {
-  MONIKER=unchained \
+  MONIKER=hightable \
   CHAIN_JSON=https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/chain.json \
   P2P_POLKACHU=true \
   run.sh osmosisd start \

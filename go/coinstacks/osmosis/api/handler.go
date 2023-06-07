@@ -6,9 +6,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth/signing"
 	"github.com/pkg/errors"
-	"github.com/shapeshift/unchained/coinstacks/osmosis"
-	"github.com/shapeshift/unchained/pkg/api"
-	"github.com/shapeshift/unchained/pkg/cosmos"
+	"github.com/incubus-network/hightable/coinstacks/osmosis"
+	"github.com/incubus-network/hightable/pkg/api"
+	"github.com/incubus-network/hightable/pkg/cosmos"
 	"golang.org/x/sync/errgroup"
 )
 

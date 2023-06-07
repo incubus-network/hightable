@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/shapeshift/unchained/pkg/api"
+	"github.com/incubus-network/hightable/pkg/api"
 )
 
 func ValidatePubkey(next http.Handler) http.Handler {

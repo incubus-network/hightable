@@ -8,11 +8,11 @@ import (
 
 	gammtypes "github.com/osmosis-labs/osmosis/v6/x/gamm/types"
 	lockuptypes "github.com/osmosis-labs/osmosis/v6/x/lockup/types"
-	"github.com/shapeshift/unchained/coinstacks/osmosis"
-	"github.com/shapeshift/unchained/coinstacks/osmosis/api"
-	"github.com/shapeshift/unchained/internal/config"
-	"github.com/shapeshift/unchained/internal/log"
-	"github.com/shapeshift/unchained/pkg/cosmos"
+	"github.com/incubus-network/hightable/coinstacks/osmosis"
+	"github.com/incubus-network/hightable/coinstacks/osmosis/api"
+	"github.com/incubus-network/hightable/internal/config"
+	"github.com/incubus-network/hightable/internal/log"
+	"github.com/incubus-network/hightable/pkg/cosmos"
 )
 
 var (

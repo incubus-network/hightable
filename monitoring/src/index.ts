@@ -9,7 +9,7 @@ type Outputs = Record<string, any>
 export = async (): Promise<Outputs> => {
   const { kubeconfig, domain, additionalDomain } = await getConfig()
 
-  const name = 'unchained'
+  const name = 'hightable'
   const namespace = `${name}-monitoring`
   const outputs: Outputs = {}
   const provider = new k8s.Provider('kube-provider', { kubeconfig })

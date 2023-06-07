@@ -1,6 +1,6 @@
 import { ethers } from 'ethers'
 import { Body, Controller, Example, Get, Path, Post, Query, Response, Route, Tags } from 'tsoa'
-import { Blockbook } from '@shapeshiftoss/blockbook'
+import { Blockbook } from '@gridironx/blockbook'
 import { Logger } from '@shapeshiftoss/logger'
 import {
   BadRequestError,
@@ -35,7 +35,7 @@ if (!NETWORK) throw new Error('NETWORK env var not set')
 if (!RPC_URL) throw new Error('RPC_URL env var not set')
 
 export const logger = new Logger({
-  namespace: ['unchained', 'coinstacks', 'gnosis', 'api'],
+  namespace: ['hightable', 'coinstacks', 'gnosis', 'api'],
   level: process.env.LOG_LEVEL,
 })
 
@@ -88,8 +88,8 @@ export class Gnosis extends Controller implements BaseAPI, API {
         balance: '1510000000000000000000',
         contract: '0x21a42669643f45Bc0e086b8Fc2ed70c23D67509d',
         decimals: 18,
-        name: 'FOX on xDai',
-        symbol: 'FOX',
+        name: 'MERLIN on xDai',
+        symbol: 'MERLIN',
         type: 'ERC20',
       },
     ],

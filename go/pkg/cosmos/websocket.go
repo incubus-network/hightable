@@ -9,7 +9,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/simapp/params"
 	"github.com/pkg/errors"
-	"github.com/shapeshift/unchained/pkg/websocket"
+	"github.com/incubus-network/hightable/pkg/websocket"
 	abci "github.com/tendermint/tendermint/abci/types"
 	tendermintjson "github.com/tendermint/tendermint/libs/json"
 	coretypes "github.com/tendermint/tendermint/rpc/core/types"

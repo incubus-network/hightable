@@ -1,4 +1,4 @@
-# Unchained (Node)
+# Hightable (Node)
 
 ## Helpful Docs
 

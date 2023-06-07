@@ -1,14 +1,14 @@
 version: "3.6"
 
 services:
-  unchained-local-node:
-    image: unchained-local-node
+  hightable-local-node:
+    image: hightable-local-node
     build:
       context: ./node
       dockerfile: Dockerfile.local
 
-  unchained-local-go:
-    image: unchained-local-go
+  hightable-local-go:
+    image: hightable-local-go
     build:
       context: ./go/build
       dockerfile: Dockerfile.local
@@ -18,7 +18,7 @@ services:
       context: ./node
       dockerfile: Dockerfile.local
     working_dir: /app/node
-    command: sh -c "yarn lerna run watch --scope @shapeshiftoss/* --parallel"
+    command: sh -c "yarn lerna run watch --scope @gridironx/* --parallel"
     volumes:
       - ./:/app
 

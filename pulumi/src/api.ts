@@ -78,7 +78,7 @@ export async function deployApi(args: DeployApiArgs): Promise<k8s.apps.v1.Deploy
   const tag = await getCoinstackHash(coinstack, buildArgs, coinstackType)
   const repositoryName = `${appName}-${coinstack}-${tier}`
 
-  let imageName = `shapeshiftdao/${repositoryName}:${tag}` // default public image
+  let imageName = `incubus-networkdao/${repositoryName}:${tag}` // default public image
   if (config.dockerhub) {
     const image = `${config.dockerhub.username}/${repositoryName}`
 

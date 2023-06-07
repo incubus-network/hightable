@@ -1,6 +1,6 @@
 import { ethers } from 'ethers'
 import { Body, Controller, Example, Get, Path, Post, Query, Response, Route, Tags } from 'tsoa'
-import { Blockbook } from '@shapeshiftoss/blockbook'
+import { Blockbook } from '@gridironx/blockbook'
 import { Logger } from '@shapeshiftoss/logger'
 import {
   BadRequestError,
@@ -33,7 +33,7 @@ if (!NETWORK) throw new Error('NETWORK env var not set')
 if (!RPC_URL) throw new Error('RPC_URL env var not set')
 
 export const logger = new Logger({
-  namespace: ['unchained', 'coinstacks', 'polygon', 'api'],
+  namespace: ['hightable', 'coinstacks', 'polygon', 'api'],
   level: process.env.LOG_LEVEL,
 })
 

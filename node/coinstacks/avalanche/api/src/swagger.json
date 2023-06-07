@@ -432,7 +432,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "@shapeshiftoss/avalanche-api",
+		"title": "@gridironx/avalanche-api",
 		"version": "9.3.0",
 		"license": {
 			"name": "MIT"

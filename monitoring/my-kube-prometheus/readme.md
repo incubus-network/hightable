@@ -1,5 +1,5 @@
 
-# Unchained monitoring stack
+# Hightable monitoring stack
 
 This is a basic monitoring setup based on the [kube-prometheus](https://github.com/prometheus-operator/kube-prometheus) project. It works as follows:
 
@@ -23,7 +23,7 @@ Run `jb install`
 # Usage
 
 ```sh
-./build.sh unchained-kube-promstack.jsonnet
+./build.sh hightable-kube-promstack.jsonnet
 kubectl apply --server-side -f manifests/setup
 kubectl apply -f manifests/
 ```

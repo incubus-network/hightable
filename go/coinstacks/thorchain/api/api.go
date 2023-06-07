@@ -1,4 +1,4 @@
-// Package classification Thorchain Unchained API
+// Package classification Thorchain Hightable API
 //
 // Provides access to thorchain chain data.
 //
@@ -23,10 +23,10 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
-	"github.com/shapeshift/unchained/internal/log"
-	"github.com/shapeshift/unchained/pkg/api"
-	"github.com/shapeshift/unchained/pkg/cosmos"
-	"github.com/shapeshift/unchained/pkg/websocket"
+	"github.com/incubus-network/hightable/internal/log"
+	"github.com/incubus-network/hightable/pkg/api"
+	"github.com/incubus-network/hightable/pkg/cosmos"
+	"github.com/incubus-network/hightable/pkg/websocket"
 )
 
 const (

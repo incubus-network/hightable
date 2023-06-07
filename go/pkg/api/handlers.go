@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/shapeshift/unchained/internal/log"
+	"github.com/incubus-network/hightable/internal/log"
 )
 
 var logger = log.WithoutFields()

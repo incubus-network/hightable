@@ -1,5 +1,5 @@
 {
-  "name": "unchained",
+  "name": "hightable",
   "license": "MIT",
   "private": true,
   "engines": {
@@ -15,8 +15,8 @@
     "go/coinstacks/**/pulumi"
   ],
   "scripts": {
-    "build": "lerna run build --scope @shapeshiftoss/*",
-    "clean": "lerna run clean --scope @shapeshiftoss/* && rm -rf coverage dist node_modules",
+    "build": "lerna run build --scope @gridironx/*",
+    "clean": "lerna run clean --scope @gridironx/* && rm -rf coverage dist node_modules",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "lint": "eslint '*/**/*.{js,ts}' && yarn lint:ts",

@@ -1,4 +1,4 @@
-# Unchained Monitoring
+# Hightable Monitoring
 
 Deploys a collection of software that enables us to aggregate logs, collect metrics and view data.
 
@@ -23,7 +23,7 @@ Helm brings a valuable level of abstraction to this stack so that maintenance ta
 Grafana can be accessed at `https://grafana-${rootDomain}`, current default configuration requires github to be used as an authentication provider. Users will only be allowed to signup/signin if they are current members of `${githubOrg}`. 
 
 ##### Considerations:
-The following modifications were made to ensure compatibility with the unchained stack as well as other monitoring stack components, if modifying this stack, be aware of these design decisions:
+The following modifications were made to ensure compatibility with the hightable stack as well as other monitoring stack components, if modifying this stack, be aware of these design decisions:
 * Grafana also depends on cert-manager and traefik, if modifications to those CRDs are made, grafana could break
 * Default grafana password generation happens on every pulumi run, we only want it to happen once so that we can bootstrap github auth.  A workaround for this issue is to add `env: { GF_SECURITY_DISABLE_INITIAL_ADMIN_CREATION: true }` to grafana helm values. 
 * If you opt to not prevent Grafana from replacing its secret on every run, know that the first password created is the only one that will ever work while configured with a persistent volume

@@ -4,7 +4,7 @@ import { CoinServiceArgs, Outputs, getConfig } from '../../../../pulumi/src'
 
 //https://www.pulumi.com/docs/intro/languages/javascript/#entrypoint
 export = async (): Promise<Outputs> => {
-  const appName = 'unchained'
+  const appName = 'hightable'
   const coinstack = 'thorchain'
   const sampleEnv = readFileSync('../../../cmd/thorchain/sample.env')
   const { kubeconfig, config, namespace } = await getConfig()

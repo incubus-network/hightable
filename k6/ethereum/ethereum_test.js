@@ -224,7 +224,7 @@ export const options = {
 }
 
 export default function () {
-	http.get(`https://api.ethereum.shapeshift.com/api/v1/account/${addresses[exec.scenario.iterationInTest%addresses.length]}`)
+	http.get(`https://api.ethereum.incubus-network.com/api/v1/account/${addresses[exec.scenario.iterationInTest%addresses.length]}`)
 }
 
 export function handleSummary(data) {

@@ -1,5 +1,5 @@
 import { bech32 } from 'bech32'
-import { Blockbook } from '@shapeshiftoss/blockbook'
+import { Blockbook } from '@gridironx/blockbook'
 import { Service } from '../../../common/api/src/utxo/service'
 import { UTXO } from '../../../common/api/src/utxo/controller'
 

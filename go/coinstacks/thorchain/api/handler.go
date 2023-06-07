@@ -8,9 +8,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth/signing"
 	"github.com/pkg/errors"
-	"github.com/shapeshift/unchained/coinstacks/thorchain"
-	"github.com/shapeshift/unchained/pkg/api"
-	"github.com/shapeshift/unchained/pkg/cosmos"
+	"github.com/incubus-network/hightable/coinstacks/thorchain"
+	"github.com/incubus-network/hightable/pkg/api"
+	"github.com/incubus-network/hightable/pkg/cosmos"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/types"
 )
@@ -157,14 +157,14 @@ func (h *Handler) ParseFee(tx signing.Tx, txid string, denom string) cosmos.Valu
 	i.SetString(fee.Amount, 10)
 
 	// add outbound fee automatically deducted from every transaction but not tracked as an actual tx fee
-	// TODO: query and cache value returned from the node at https://daemon.thorchain.shapeshift.com/lcd/thorchain/constants
+	// TODO: query and cache value returned from the node at https://daemon.thorchain.incubus-network.com/lcd/thorchain/constants
 	fee.Amount = i.Add(i, big.NewInt(2000000)).String()
 
 	return fee
 }
 
 func (h *Handler) getTxFromEndBlockEvents(eventCache map[string]interface{}, blockHeader types.Header, endBlockEvents []abci.Event, eventIndex int) (*ResultTx, error) {
-	// attempt to find matching fee event for txid or use default fee as defined by https://daemon.thorchain.shapeshift.com/lcd/thorchain/constants
+	// attempt to find matching fee event for txid or use default fee as defined by https://daemon.thorchain.incubus-network.com/lcd/thorchain/constants
 	matchFee := func(txid string, events []thorchain.TypedEvent) cosmos.Value {
 		for _, e := range events {
 			switch v := e.(type) {

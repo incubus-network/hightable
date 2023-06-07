@@ -2,7 +2,7 @@ import { serialize } from '@ethersproject/transactions'
 import bn from 'bignumber.js'
 import { ethers, Contract, BigNumber } from 'ethers'
 import { Body, Controller, Example, Get, Path, Post, Query, Response, Route, Tags } from 'tsoa'
-import { Blockbook } from '@shapeshiftoss/blockbook'
+import { Blockbook } from '@gridironx/blockbook'
 import { Logger } from '@shapeshiftoss/logger'
 import { predeploys, getContractInterface } from '@eth-optimism/contracts'
 
@@ -31,7 +31,7 @@ if (!NETWORK) throw new Error('NETWORK env var not set')
 if (!RPC_URL) throw new Error('RPC_URL env var not set')
 
 export const logger = new Logger({
-  namespace: ['unchained', 'coinstacks', 'optimism', 'api'],
+  namespace: ['hightable', 'coinstacks', 'optimism', 'api'],
   level: process.env.LOG_LEVEL,
 })
 

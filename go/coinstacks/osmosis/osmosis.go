@@ -2,8 +2,8 @@ package osmosis
 
 import (
 	"github.com/pkg/errors"
-	"github.com/shapeshift/unchained/internal/log"
-	"github.com/shapeshift/unchained/pkg/cosmos"
+	"github.com/incubus-network/hightable/internal/log"
+	"github.com/incubus-network/hightable/pkg/cosmos"
 )
 
 var logger = log.WithoutFields()

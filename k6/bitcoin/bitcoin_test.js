@@ -235,11 +235,11 @@ export const options = {
 }
 
 export function account() {
-	http.get(`https://api.bitcoin.shapeshift.com/api/v1/account/${xpubs[exec.scenario.iterationInTest%xpubs.length]}`)
+	http.get(`https://api.bitcoin.incubus-network.com/api/v1/account/${xpubs[exec.scenario.iterationInTest%xpubs.length]}`)
 }
 
 export function utxos() {
-	http.get(`https://api.bitcoin.shapeshift.com/api/v1/account/${xpubs[exec.scenario.iterationInTest%xpubs.length]}/utxos`)
+	http.get(`https://api.bitcoin.incubus-network.com/api/v1/account/${xpubs[exec.scenario.iterationInTest%xpubs.length]}/utxos`)
 }
 
 export function handleSummary(data) {

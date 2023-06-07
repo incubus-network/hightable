@@ -91,7 +91,7 @@ export function createCoinService(args: CoinServiceArgs, assetName: string, snap
   if (readinessScript || livenessScript) {
     const monitorContainer: k8s.types.input.core.v1.Container = {
       name: `${name}-monitor`,
-      image: 'shapeshiftdao/unchained-probe:1.0.0',
+      image: 'incubus-networkdao/hightable-probe:1.0.0',
       env,
       ...(readinessScript && {
         readinessProbe: {
@@ -410,7 +410,7 @@ export async function deployStatefulService(
     )
   }
 
-  if (namespace == 'unchained-dev') {
+  if (namespace == 'hightable-dev') {
     deployReaperCron(assetName, config.statefulService, namespace, provider)
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@shapeshiftoss/optimism-api",
+  "name": "@gridironx/optimism-api",
   "version": "9.3.0",
   "license": "MIT",
   "private": true,
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@eth-optimism/contracts": "^0.5.40",
-    "@shapeshiftoss/blockbook": "^9.3.0",
+    "@gridironx/blockbook": "^9.3.0",
     "@shapeshiftoss/common-api": "^9.3.0",
     "bignumber.js": "^9.1.1"
   }

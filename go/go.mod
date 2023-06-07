@@ -1,4 +1,4 @@
-module github.com/shapeshift/unchained
+module github.com/incubus-network/hightable
 
 go 1.17
 
@@ -132,6 +132,6 @@ replace (
 	github.com/99designs/keyring => github.com/cosmos/keyring v1.1.7-0.20210622111912-ef00f8ac3d76
 	github.com/binance-chain/tss-lib => gitlab.com/thorchain/tss/tss-lib v0.1.2
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
-	gitlab.com/thorchain/thornode => github.com/shapeshift/thornode v1.97.2
+	gitlab.com/thorchain/thornode => github.com/incubus-network/thornode v1.97.2
 	google.golang.org/grpc => google.golang.org/grpc v1.33.2
 )

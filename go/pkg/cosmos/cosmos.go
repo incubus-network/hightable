@@ -23,7 +23,7 @@ import (
 	ibccoretypes "github.com/cosmos/ibc-go/v3/modules/core/types"
 	"github.com/go-resty/resty/v2"
 	"github.com/pkg/errors"
-	"github.com/shapeshift/unchained/internal/log"
+	"github.com/incubus-network/hightable/internal/log"
 	liquiditytypes "github.com/tendermint/liquidity/x/liquidity/types"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"

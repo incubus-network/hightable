@@ -1,4 +1,4 @@
-# Unchained (Go)
+# Hightable (Go)
 
 ## Project Structure
 
@@ -18,7 +18,7 @@
   - [gopls](https://pkg.go.dev/golang.org/x/tools/gopls) language server
   - [golangci-lint](https://golangci-lint.run/) to match the linter used in CI
   - [goimports](https://pkg.go.dev/golang.org/x/tools/cmd/goimports) to match the formatting run on git pre-commit hook (default behavior when using gopls)
-- Visual Studio Code expects any golang projects to be opened up with a `go.mod` file at the root directory for the tooling to work properly, so be sure to open up the project at `unchained/go`
+- Visual Studio Code expects any golang projects to be opened up with a `go.mod` file at the root directory for the tooling to work properly, so be sure to open up the project at `hightable/go`
 
 ## Initial Setup
 
@@ -38,7 +38,7 @@
   cp go/cmd/ethereum/sample.env go/cmd/ethereum/.env
   ```
 
-- Go to `unchained/` and install dependencies by running `yarn` (which will also prepare the git pre-commit hook with `goimports`)
+- Go to `hightable/` and install dependencies by running `yarn` (which will also prepare the git pre-commit hook with `goimports`)
   ```sh
   yarn
   ```

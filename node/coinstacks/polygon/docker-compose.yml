@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   api:
-    image: unchained-local-node
+    image: hightable-local-node
     env_file: .env
     labels:
       - 'traefik.enable=true'

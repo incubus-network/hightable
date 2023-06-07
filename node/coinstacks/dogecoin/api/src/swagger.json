@@ -536,7 +536,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "@shapeshiftoss/dogecoin-api",
+		"title": "@gridironx/dogecoin-api",
 		"version": "9.3.0",
 		"license": {
 			"name": "MIT"

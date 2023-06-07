@@ -1,7 +1,7 @@
 package cosmos
 
 import (
-	"github.com/shapeshift/unchained/pkg/api"
+	"github.com/incubus-network/hightable/pkg/api"
 )
 
 // Contains common cosmossdk info about account details for an address or xpub

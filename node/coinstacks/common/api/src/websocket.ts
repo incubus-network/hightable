@@ -46,7 +46,7 @@ export class ConnectionHandler {
   private pingTimeout?: NodeJS.Timeout
   private subscriptionIds = new Map<string, void>()
 
-  private logger = new Logger({ namespace: ['unchained', 'coinstacks', 'common', 'api'], level: process.env.LOG_LEVEL })
+  private logger = new Logger({ namespace: ['hightable', 'coinstacks', 'common', 'api'], level: process.env.LOG_LEVEL })
 
   private constructor(websocket: WebSocket, registry: Registry) {
     this.clientId = v4()

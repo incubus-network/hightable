@@ -8,7 +8,7 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/gorilla/websocket"
-	"github.com/shapeshift/unchained/internal/log"
+	"github.com/incubus-network/hightable/internal/log"
 )
 
 const (
@@ -41,7 +41,7 @@ type MessageResponse struct {
 	SubscriptionID string      `json:"subscriptionId"`
 }
 
-// Connection represents a single websocket connection on the unchained api server
+// Connection represents a single websocket connection on the hightable api server
 type Connection struct {
 	clientID        string
 	conn            *websocket.Conn

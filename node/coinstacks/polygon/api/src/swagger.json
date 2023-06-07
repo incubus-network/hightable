@@ -432,7 +432,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "@shapeshiftoss/polygon-api",
+		"title": "@gridironx/polygon-api",
 		"version": "9.3.0",
 		"license": {
 			"name": "MIT"
